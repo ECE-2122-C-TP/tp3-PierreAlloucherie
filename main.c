@@ -166,29 +166,36 @@
 /*Exo9*/
 /*int main()
 {
-    int nbpierre = 0, i = 1;
-    printf("Entrez le nombre de pierres disponibles : ");
-    scanf("%d", &nbpierre);
-    while((i*i) % nbpierre == 0)
+    int nbMoi = 0, moiEtage = 1, etage = 1;
+    printf("Entrez le nombre de pierre :");
+    scanf("%d", &nbMoi);
+    while (nbMoi > moiEtage)
     {
-        i = i +;
+        moiEtage = (etage*etage) + moiEtage;
+        etage = etage + 1;
     }
-    printf("il y a %d d'etages possibles", );
+    printf("Vous allez faire %d d'etage avec %d de pierre", etage-1, nbMoi);
     return 0;
 }*/
 
 /*Exo10*/
-int main()
+/*int main()
 {
-    int nombre=0, somme=0, moyenne=0, nbTotal=0;
-    while(nombre>0)
+    int nombre=0, somme=0, nbEntrez=0, nbPositif = 1;
+    while(nbPositif)
     {
-        printf("Entrez un nombre positif (ou negatif pour arreter");
+        printf("Entrez un nombre : ");
         scanf("%d", &nombre);
-        somme= somme + nombre;
-        nbTotal= nbTotal + 1;
+        if(nombre>=0)
+        {
+            somme = somme + nombre;
+            nbEntrez = nbEntrez + 1;
+        }
+        else
+        {
+            nbPositif = 0;
+        }
     }
-    moyenne=somme/nbTotal;
-    printf("la moyenne est de %d", moyenne);
+    printf("la moyenne est de %d", somme/nbEntrez);
     return 0;
-}
+}*/
